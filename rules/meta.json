@@ -4,6 +4,7 @@
   "domain": "calculus",
   "title": "Open Symbolic Rules - Calculus",
   "description": "Rules for Limits and Derivatives.",
+  "license": "MIT",
   "load_order": [
     "1-limits/1.1-basic-limits.json",
     "2-derivatives/2.1-basic-derivatives.json",

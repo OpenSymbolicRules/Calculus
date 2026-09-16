@@ -14,3 +14,8 @@ It provides a universal, language-agnostic JSON format for computing:
 
 Calculus rules use the OpenMath `calculus1`, `limit1`, and `fns1` Content
 Dictionaries to preserve the binding semantics of derivatives and limits.
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE). OpenMath
+identifiers are referenced for semantic interoperability; see [NOTICE.md](NOTICE.md).
