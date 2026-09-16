@@ -3,25 +3,26 @@
   "section": "1.1",
   "title": "Basic Limits",
   "semantics": {
-    "Limit": "local:calculus.limit",
-    "Sin": "openmath:transc1.sin",
-    "Div": "openmath:arith1.divide",
-    "Add": "openmath:arith1.plus"
+    "Limit": "openmath:limit1#limit",
+    "BothSides": "openmath:limit1#both_sides",
+    "Lambda": "openmath:fns1#lambda",
+    "Sin": "openmath:transc1#sin",
+    "Divide": "openmath:arith1#divide"
   },
   "rules": [
     {
       "id": 1,
       "description": "Limit of a constant: lim_{x->a} c = c",
-      "pattern": ["Limit", "~c", "~x", "~a"],
+      "pattern": ["Limit", "a_", "BothSides", ["Lambda", "x_", "c_"]],
       "constraints": [
-        ["FreeQ", "~c", "~x"]
+        ["FreeQ", "c_", "x_"]
       ],
-      "result": "~c"
+      "result": "c_"
     },
     {
       "id": 2,
       "description": "Fundamental sine limit: lim_{x->0} sin(x)/x = 1",
-      "pattern": ["Limit", ["Div", ["Sin", "~x"], "~x"], "~x", 0],
+      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Sin", "x_"], "x_"]]],
       "constraints": [],
       "result": 1
     }

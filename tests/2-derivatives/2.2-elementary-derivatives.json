@@ -1,0 +1,31 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "section": "2.2",
+  "title": "Elementary Derivative Rules Tests",
+  "tests": [
+    {
+      "id": 1,
+      "expression": ["Derivative", ["Lambda", "x", "x"]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", 1],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 2,
+      "expression": ["Derivative", ["Lambda", "x", ["Sin", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Cos", "x"]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 3,
+      "expression": ["Derivative", ["Lambda", "x", ["Exp", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Exp", "x"]],
+      "num_steps": 1,
+      "grade": "A"
+    }
+  ]
+}

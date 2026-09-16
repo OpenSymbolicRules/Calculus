@@ -11,3 +11,6 @@ It provides a universal, language-agnostic JSON format for computing:
 - `rules/`: Calculus rewriting rules in JSON format
 - `tests/`: Test fixtures to validate implementations
 - `Specification/`: Submodule pointing to the core OSR JSON schemas
+
+Calculus rules use the OpenMath `calculus1`, `limit1`, and `fns1` Content
+Dictionaries to preserve the binding semantics of derivatives and limits.

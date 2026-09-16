@@ -6,20 +6,21 @@
   "description": "Rules for Limits and Derivatives.",
   "load_order": [
     "1-limits/1.1-basic-limits.json",
-    "2-derivatives/2.1-basic-derivatives.json"
+    "2-derivatives/2.1-basic-derivatives.json",
+    "2-derivatives/2.2-elementary-derivatives.json"
   ],
-  "rule_count": 4,
-  "test_count": 2,
+  "rule_count": 9,
+  "test_count": 5,
   "extensions": [
     {
       "name": "Limit",
       "arity": 3,
-      "semantics": "Limit(expr, var, point) representing lim_{var -> point} expr."
+      "semantics": "openmath:limit1#limit: Limit(point, approach, Lambda(variable, expression))."
     },
     {
       "name": "Derivative",
-      "arity": 2,
-      "semantics": "Derivative(expr, var) representing d/dvar (expr)."
+      "arity": 1,
+      "semantics": "openmath:calculus1#diff: Derivative(Lambda(variable, expression))."
     }
   ]
 }

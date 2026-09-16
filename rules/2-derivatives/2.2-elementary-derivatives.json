@@ -1,0 +1,22 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "section": "2.2",
+  "title": "Elementary Derivatives",
+  "semantics": {
+    "Derivative": "openmath:calculus1#diff",
+    "Lambda": "openmath:fns1#lambda",
+    "Sin": "openmath:transc1#sin",
+    "Cos": "openmath:transc1#cos",
+    "Exp": "openmath:transc1#exp",
+    "Log": "openmath:transc1#ln",
+    "Multiply": "openmath:arith1#times",
+    "Divide": "openmath:arith1#divide"
+  },
+  "rules": [
+    {"id": 1, "description": "Derivative of the identity function", "pattern": ["Derivative", ["Lambda", "x_", "x_"]], "constraints": [], "result": ["Lambda", "x_", 1]},
+    {"id": 2, "description": "Derivative of sine", "pattern": ["Derivative", ["Lambda", "x_", ["Sin", "x_"]]], "constraints": [], "result": ["Lambda", "x_", ["Cos", "x_"]]},
+    {"id": 3, "description": "Derivative of cosine", "pattern": ["Derivative", ["Lambda", "x_", ["Cos", "x_"]]], "constraints": [], "result": ["Lambda", "x_", ["Multiply", -1, ["Sin", "x_"]]]},
+    {"id": 4, "description": "Derivative of the exponential function", "pattern": ["Derivative", ["Lambda", "x_", ["Exp", "x_"]]], "constraints": [], "result": ["Lambda", "x_", ["Exp", "x_"]]},
+    {"id": 5, "description": "Derivative of the natural logarithm", "pattern": ["Derivative", ["Lambda", "x_", ["Log", "x_"]]], "constraints": [], "result": ["Lambda", "x_", ["Divide", 1, "x_"]]}
+  ]
+}

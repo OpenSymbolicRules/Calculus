@@ -5,7 +5,7 @@
   "tests": [
     {
       "id": 1,
-      "expression": ["Limit", ["Div", ["Sin", "x"], "x"], "x", 0],
+      "expression": ["Limit", 0, "BothSides", ["Lambda", "x", ["Divide", ["Sin", "x"], "x"]]],
       "variable": "x",
       "expected_result": 1,
       "num_steps": 1,

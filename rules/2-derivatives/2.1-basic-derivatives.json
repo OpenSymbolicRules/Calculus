@@ -3,29 +3,30 @@
   "section": "2.1",
   "title": "Basic Derivatives",
   "semantics": {
-    "Derivative": "openmath:calculus1.diff",
-    "Pow": "openmath:arith1.power",
-    "Mul": "openmath:arith1.times",
-    "Add": "openmath:arith1.plus"
+    "Derivative": "openmath:calculus1#diff",
+    "Lambda": "openmath:fns1#lambda",
+    "Power": "openmath:arith1#power",
+    "Multiply": "openmath:arith1#times",
+    "Add": "openmath:arith1#plus"
   },
   "rules": [
     {
       "id": 1,
       "description": "Derivative of a constant: d/dx(c) = 0",
-      "pattern": ["Derivative", "~c", "~x"],
+      "pattern": ["Derivative", ["Lambda", "x_", "c_"]],
       "constraints": [
-        ["FreeQ", "~c", "~x"]
+        ["FreeQ", "c_", "x_"]
       ],
-      "result": 0
+      "result": ["Lambda", "x_", 0]
     },
     {
       "id": 2,
       "description": "Power rule: d/dx(x^n) = n*x^(n-1)",
-      "pattern": ["Derivative", ["Pow", "~x", "~n"], "~x"],
+      "pattern": ["Derivative", ["Lambda", "x_", ["Power", "x_", "n_"]]],
       "constraints": [
-        ["FreeQ", "~n", "~x"]
+        ["FreeQ", "n_", "x_"]
       ],
-      "result": ["Mul", "~n", ["Pow", "~x", ["Add", "~n", -1]]]
+      "result": ["Lambda", "x_", ["Multiply", "n_", ["Power", "x_", ["Add", "n_", -1]]]]
     }
   ]
 }

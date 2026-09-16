@@ -5,9 +5,9 @@
   "tests": [
     {
       "id": 1,
-      "expression": ["Derivative", ["Pow", "x", 2], "x"],
+      "expression": ["Derivative", ["Lambda", "x", ["Power", "x", 2]]],
       "variable": "x",
-      "expected_result": ["Mul", 2, ["Pow", "x", 1]],
+      "expected_result": ["Lambda", "x", ["Multiply", 2, ["Power", "x", 1]]],
       "num_steps": 1,
       "grade": "A"
     }
