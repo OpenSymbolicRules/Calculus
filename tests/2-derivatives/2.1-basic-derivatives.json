@@ -1,0 +1,15 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "section": "2.1",
+  "title": "Basic Derivatives Tests",
+  "tests": [
+    {
+      "id": 1,
+      "expression": ["Derivative", ["Pow", "x", 2], "x"],
+      "variable": "x",
+      "expected_result": ["Mul", 2, ["Pow", "x", 1]],
+      "num_steps": 1,
+      "grade": "A"
+    }
+  ]
+}

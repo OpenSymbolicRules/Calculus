@@ -1,0 +1,15 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "section": "1.1",
+  "title": "Basic Limits Tests",
+  "tests": [
+    {
+      "id": 1,
+      "expression": ["Limit", ["Div", ["Sin", "x"], "x"], "x", 0],
+      "variable": "x",
+      "expected_result": 1,
+      "num_steps": 1,
+      "grade": "A"
+    }
+  ]
+}

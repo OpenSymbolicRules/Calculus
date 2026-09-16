@@ -1,0 +1,25 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "osr_version": "0.1.0",
+  "domain": "calculus",
+  "title": "Open Symbolic Rules - Calculus",
+  "description": "Rules for Limits and Derivatives.",
+  "load_order": [
+    "1-limits/1.1-basic-limits.json",
+    "2-derivatives/2.1-basic-derivatives.json"
+  ],
+  "rule_count": 4,
+  "test_count": 2,
+  "extensions": [
+    {
+      "name": "Limit",
+      "arity": 3,
+      "semantics": "Limit(expr, var, point) representing lim_{var -> point} expr."
+    },
+    {
+      "name": "Derivative",
+      "arity": 2,
+      "semantics": "Derivative(expr, var) representing d/dvar (expr)."
+    }
+  ]
+}
