@@ -1,7 +1,8 @@
 # Structural derivatives
 
-The `2.3-structural-derivatives` profile applies the linearity and product
-rules before the elementary derivative rules. Its product rule is ordered:
+The `2.3-structural-derivatives` file expresses the linearity and product
+rules, allowing its results to be simplified further by the elementary
+derivative rules. Its product rule is ordered:
 
 `D(f g) = f D(g) + D(f) g`.
 
