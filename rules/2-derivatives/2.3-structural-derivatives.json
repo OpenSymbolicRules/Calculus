@@ -1,0 +1,28 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "identity": "calculus:2-derivatives/2.3-structural-derivatives",
+  "section": "2.3",
+  "title": "Structural Derivative Rules",
+  "semantics": {
+    "Derivative": "openmath:calculus1#diff",
+    "Lambda": "openmath:fns1#lambda",
+    "Add": "openmath:arith1#plus",
+    "Multiply": "openmath:arith1#times"
+  },
+  "rules": [
+    {
+      "id": 1,
+      "description": "Linearity of differentiation over a binary sum.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Add", "f_", "g_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Add", ["Derivative", ["Lambda", "x_", "f_"]], ["Derivative", ["Lambda", "x_", "g_"]]]]
+    },
+    {
+      "id": 2,
+      "description": "Product rule, preserving the factor order for noncommutative-aware consumers.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Multiply", "f_", "g_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Add", ["Multiply", "f_", ["Derivative", ["Lambda", "x_", "g_"]]], ["Multiply", ["Derivative", ["Lambda", "x_", "f_"]], "g_"]]]
+    }
+  ]
+}

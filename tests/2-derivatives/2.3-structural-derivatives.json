@@ -1,0 +1,23 @@
+{
+  "$schema": "open-symbolic-rules/v0.1",
+  "section": "2.3",
+  "title": "Structural Derivative Rule Tests",
+  "tests": [
+    {
+      "id": 1,
+      "expression": ["Derivative", ["Lambda", "x", ["Add", ["Sin", "x"], ["Exp", "x"]]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Add", ["Derivative", ["Lambda", "x", ["Sin", "x"]]], ["Derivative", ["Lambda", "x", ["Exp", "x"]]]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 2,
+      "expression": ["Derivative", ["Lambda", "x", ["Multiply", ["Sin", "x"], ["Exp", "x"]]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Add", ["Multiply", ["Sin", "x"], ["Derivative", ["Lambda", "x", ["Exp", "x"]]]], ["Multiply", ["Derivative", ["Lambda", "x", ["Sin", "x"]]], ["Exp", "x"]]]],
+      "num_steps": 1,
+      "grade": "A"
+    }
+  ]
+}
