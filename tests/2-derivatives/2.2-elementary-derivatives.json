@@ -58,6 +58,22 @@
       "expected_result": ["Lambda", "x", ["Divide", 1, ["Power", ["Cosh", "x"], 2]]],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 8,
+      "expression": ["Derivative", ["Lambda", "x", ["Atan", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", 1, ["Add", 1, ["Power", "x", 2]]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 9,
+      "expression": ["Derivative", ["Lambda", "x", ["Atanh", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", 1, ["Subtract", 1, ["Power", "x", 2]]]],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }
