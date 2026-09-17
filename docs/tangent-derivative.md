@@ -17,3 +17,10 @@ It also includes the inverse functions `D(atan(x)) = 1 / (1 + x^2)` and
 whose semantics are respectively OpenMath `transc1#arctan` and
 `transc1#arctanh`; their values and derivatives are understood on their
 domains of definition.
+
+For inverse sine and cosine, the profile uses the principal-domain forms
+`D(asin(x)) = 1 / sqrt(1 - x^2)` and
+`D(acos(x)) = -1 / sqrt(1 - x^2)`. `Sqrt` has explicit OpenMath
+`arith1#root` semantics (with degree two), so consumers must retain the
+OpenMath branch convention rather than treating it as an unconstrained
+algebraic square root.

@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Elementary derivative rules for hyperbolic sine and cosine.
 - Elementary derivative rule for hyperbolic tangent.
 - Elementary derivative rules for inverse tangent and inverse hyperbolic tangent.
+- Elementary derivative rules for inverse sine and inverse cosine on their principal domains.
 - Initial structure for the Calculus module
 - Submodule link to OSR Specification schemas
 - Elementary derivative rules for identity, sine, cosine, exponential, and natural logarithm.

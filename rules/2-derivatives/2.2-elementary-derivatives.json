@@ -13,11 +13,14 @@
     "Tanh": "openmath:transc1#tanh",
     "Atan": "openmath:transc1#arctan",
     "Atanh": "openmath:transc1#arctanh",
+    "Asin": "openmath:transc1#arcsin",
+    "Acos": "openmath:transc1#arccos",
     "Exp": "openmath:transc1#exp",
     "Log": "openmath:transc1#ln",
     "Multiply": "openmath:arith1#times",
     "Power": "openmath:arith1#power",
-    "Divide": "openmath:arith1#divide"
+    "Divide": "openmath:arith1#divide",
+    "Sqrt": "openmath:arith1#root"
   },
   "rules": [
     {
@@ -276,6 +279,38 @@
           {
             "name": "OpenSymbolicRules Calculus",
             "locator": "calculus:2-derivatives/2.2-elementary-derivatives:11"
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "description": "Derivative of inverse sine on its principal domain.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Asin", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Divide", 1, ["Sqrt", ["Subtract", 1, ["Power", "x_", 2]]]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:12"
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "description": "Derivative of inverse cosine on its principal domain.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Acos", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Divide", -1, ["Sqrt", ["Subtract", 1, ["Power", "x_", 2]]]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:13"
           }
         ]
       }
