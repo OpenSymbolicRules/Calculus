@@ -23,4 +23,5 @@ jobs:
       - run: check-jsonschema --check-metaschema Specification/schemas/*.schema.json
       - run: check-jsonschema --schemafile Specification/schemas/meta.schema.json rules/meta.json
       - run: find rules -name '*.json' ! -name meta.json -print0 | xargs -0 check-jsonschema --schemafile Specification/schemas/rule-file.schema.json --base-uri "file://${PWD}/Specification/schemas/"
+      - run: python3 Specification/scripts/validate_semantic_closure.py rules
       - run: find tests -name '*.json' -print0 | xargs -0 check-jsonschema --schemafile Specification/schemas/test-file.schema.json --base-uri "file://${PWD}/Specification/schemas/"

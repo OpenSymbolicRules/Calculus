@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- CI validation that every operator used by a rule has a declared OpenMath
+  semantic mapping.
 - Stable `identity` values for rule files, completing canonical `identity:id`
   rule identifiers.
 - Structural derivative rules for binary sums and products. The product rule
