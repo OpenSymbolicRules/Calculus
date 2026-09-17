@@ -26,6 +26,22 @@
       "expected_result": ["Divide", 1, 2],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 4,
+      "expression": ["Limit", 0, "BothSides", ["Lambda", "x", ["Divide", ["Subtract", ["Exp", "x"], 1], "x"]]],
+      "variable": "x",
+      "expected_result": 1,
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 5,
+      "expression": ["Limit", 0, "BothSides", ["Lambda", "x", ["Divide", ["Log", ["Add", 1, "x"]], "x"]]],
+      "variable": "x",
+      "expected_result": 1,
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }

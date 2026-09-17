@@ -9,6 +9,9 @@
     "Sin": "openmath:transc1#sin",
     "Cos": "openmath:transc1#cos",
     "Tan": "openmath:transc1#tan",
+    "Exp": "openmath:transc1#exp",
+    "Log": "openmath:transc1#ln",
+    "Add": "openmath:arith1#plus",
     "Subtract": "openmath:arith1#minus",
     "Power": "openmath:arith1#power",
     "Divide": "openmath:arith1#divide"
@@ -149,6 +152,38 @@
           {
             "name": "OpenSymbolicRules Calculus",
             "locator": "calculus:1-limits/1.1-basic-limits:4"
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "description": "Fundamental exponential limit: lim(x→0) (exp(x) - 1)/x = 1.",
+      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Subtract", ["Exp", "x_"], 1], "x_"]]],
+      "constraints": [],
+      "result": 1,
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:1-limits/1.1-basic-limits:5"
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "description": "Fundamental logarithmic limit: lim(x→0) log(1 + x)/x = 1.",
+      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Log", ["Add", 1, "x_"]], "x_"]]],
+      "constraints": [],
+      "result": 1,
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:1-limits/1.1-basic-limits:6"
           }
         ]
       }
