@@ -8,6 +8,8 @@
     "Sin": "openmath:transc1#sin",
     "Cos": "openmath:transc1#cos",
     "Tan": "openmath:transc1#tan",
+    "Sinh": "openmath:transc1#sinh",
+    "Cosh": "openmath:transc1#cosh",
     "Exp": "openmath:transc1#exp",
     "Log": "openmath:transc1#ln",
     "Multiply": "openmath:arith1#times",
@@ -191,6 +193,38 @@
           {
             "name": "OpenSymbolicRules Calculus",
             "locator": "calculus:2-derivatives/2.2-elementary-derivatives:6"
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "description": "Derivative of hyperbolic sine.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Sinh", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Cosh", "x_"]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:7"
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "description": "Derivative of hyperbolic cosine.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Cosh", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Sinh", "x_"]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:8"
           }
         ]
       }

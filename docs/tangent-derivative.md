@@ -6,3 +6,6 @@ The elementary derivative profile includes
 operator in the result.
 
 Like the usual tangent function, the rule applies on its domain of definition.
+
+The same elementary profile also provides `D(sinh(x)) = cosh(x)` and
+`D(cosh(x)) = sinh(x)` using OpenMath `transc1` symbols.
