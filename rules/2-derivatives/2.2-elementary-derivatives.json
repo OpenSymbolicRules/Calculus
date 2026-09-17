@@ -14,6 +14,9 @@
     "Sinh": "openmath:transc1#sinh",
     "Cosh": "openmath:transc1#cosh",
     "Tanh": "openmath:transc1#tanh",
+    "Coth": "openmath:transc1#coth",
+    "Sech": "openmath:transc1#sech",
+    "Csch": "openmath:transc1#csch",
     "Atan": "openmath:transc1#arctan",
     "Atanh": "openmath:transc1#arctanh",
     "Asin": "openmath:transc1#arcsin",
@@ -362,6 +365,54 @@
           {
             "name": "OpenSymbolicRules Calculus",
             "locator": "calculus:2-derivatives/2.2-elementary-derivatives:16"
+          }
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "description": "Derivative of hyperbolic cotangent, represented without introducing a nonstandard hyperbolic cosecant-squared head.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Coth", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Divide", -1, ["Power", ["Sinh", "x_"], 2]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:17"
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "description": "Derivative of hyperbolic secant.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Sech", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Multiply", -1, ["Sech", "x_"], ["Tanh", "x_"]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:18"
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "description": "Derivative of hyperbolic cosecant.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Csch", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Multiply", -1, ["Csch", "x_"], ["Coth", "x_"]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:19"
           }
         ]
       }

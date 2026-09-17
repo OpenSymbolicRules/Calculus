@@ -114,6 +114,30 @@
       "expected_result": ["Lambda", "x", ["Multiply", -1, ["Csc", "x"], ["Cot", "x"]]],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 15,
+      "expression": ["Derivative", ["Lambda", "x", ["Coth", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", -1, ["Power", ["Sinh", "x"], 2]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 16,
+      "expression": ["Derivative", ["Lambda", "x", ["Sech", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Multiply", -1, ["Sech", "x"], ["Tanh", "x"]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 17,
+      "expression": ["Derivative", ["Lambda", "x", ["Csch", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Multiply", -1, ["Csch", "x"], ["Coth", "x"]]],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }

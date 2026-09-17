@@ -29,3 +29,8 @@ The trigonometric family is completed with
 `D(cot(x)) = -1 / sin(x)^2`, `D(sec(x)) = sec(x) tan(x)`, and
 `D(csc(x)) = -csc(x) cot(x)`. Their OpenMath heads are `transc1#cot`,
 `transc1#sec`, and `transc1#csc` respectively.
+
+Their hyperbolic counterparts are also available:
+`D(coth(x)) = -1 / sinh(x)^2`, `D(sech(x)) = -sech(x) tanh(x)`, and
+`D(csch(x)) = -csch(x) coth(x)`. These use the OpenMath `transc1` heads
+`coth`, `sech`, and `csch` directly.
