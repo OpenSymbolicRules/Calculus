@@ -10,6 +10,22 @@
       "expected_result": 1,
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 2,
+      "expression": ["Limit", 0, "BothSides", ["Lambda", "x", ["Divide", ["Tan", "x"], "x"]]],
+      "variable": "x",
+      "expected_result": 1,
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 3,
+      "expression": ["Limit", 0, "BothSides", ["Lambda", "x", ["Divide", ["Subtract", 1, ["Cos", "x"]], ["Power", "x", 2]]]],
+      "variable": "x",
+      "expected_result": ["Divide", 1, 2],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }

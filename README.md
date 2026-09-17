@@ -18,6 +18,9 @@ Dictionaries to preserve the binding semantics of derivatives and limits.
 Derivative rules include linearity and the order-preserving product rule, so
 consumers can compose elementary derivatives without assuming commutativity.
 
+The limits profile includes the standard sine, tangent, and second-order cosine
+limits at zero.
+
 ## License
 
 This repository is licensed under the [MIT License](LICENSE). OpenMath

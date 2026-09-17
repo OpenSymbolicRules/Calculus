@@ -7,6 +7,10 @@
     "BothSides": "openmath:limit1#both_sides",
     "Lambda": "openmath:fns1#lambda",
     "Sin": "openmath:transc1#sin",
+    "Cos": "openmath:transc1#cos",
+    "Tan": "openmath:transc1#tan",
+    "Subtract": "openmath:arith1#minus",
+    "Power": "openmath:arith1#power",
     "Divide": "openmath:arith1#divide"
   },
   "rules": [
@@ -54,6 +58,20 @@
       ],
       "constraints": [],
       "result": 1
+    },
+    {
+      "id": 3,
+      "description": "Fundamental tangent limit: lim(x→0) tan(x)/x = 1.",
+      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Tan", "x_"], "x_"]]],
+      "constraints": [],
+      "result": 1
+    },
+    {
+      "id": 4,
+      "description": "Second-order cosine limit: lim(x→0) (1 - cos(x))/x² = 1/2.",
+      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Subtract", 1, ["Cos", "x_"]], ["Power", "x_", 2]]]],
+      "constraints": [],
+      "result": ["Divide", 1, 2]
     }
   ],
   "identity": "calculus:1-limits/1.1-basic-limits"

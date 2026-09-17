@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Structural derivative rules for binary sums and products. The product rule
   preserves factor order, making it suitable for noncommutative expressions.
 - Structural derivative rule for binary differences.
+- Fundamental tangent and second-order cosine limits at zero.
 - Initial structure for the Calculus module
 - Submodule link to OSR Specification schemas
 - Elementary derivative rules for identity, sine, cosine, exponential, and natural logarithm.
