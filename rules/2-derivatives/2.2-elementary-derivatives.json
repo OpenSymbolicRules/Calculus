@@ -25,6 +25,8 @@
     "Acosh": "openmath:transc1#arccosh",
     "Exp": "openmath:transc1#exp",
     "Log": "openmath:transc1#ln",
+    "Add": "openmath:arith1#plus",
+    "Subtract": "openmath:arith1#minus",
     "Multiply": "openmath:arith1#times",
     "Power": "openmath:arith1#power",
     "Divide": "openmath:arith1#divide",

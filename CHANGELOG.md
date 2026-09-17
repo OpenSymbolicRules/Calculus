@@ -31,4 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MIT licensing, an OpenMath attribution notice, and SPDX metadata in the rule manifest.
 
 ### Changed
+- Declare the OpenMath semantics of arithmetic heads used by inverse-function
+  derivative rules.
 - Represented limits and derivatives with their OpenMath `limit1` and `calculus1` semantics.
