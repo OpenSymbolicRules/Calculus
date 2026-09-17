@@ -34,7 +34,16 @@
           "x_"
         ]
       ],
-      "result": "c_"
+      "result": "c_",
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:1-limits/1.1-basic-limits:1"
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -57,21 +66,92 @@
         ]
       ],
       "constraints": [],
-      "result": 1
+      "result": 1,
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:1-limits/1.1-basic-limits:2"
+          }
+        ]
+      }
     },
     {
       "id": 3,
       "description": "Fundamental tangent limit: lim(x→0) tan(x)/x = 1.",
-      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Tan", "x_"], "x_"]]],
+      "pattern": [
+        "Limit",
+        0,
+        "BothSides",
+        [
+          "Lambda",
+          "x_",
+          [
+            "Divide",
+            [
+              "Tan",
+              "x_"
+            ],
+            "x_"
+          ]
+        ]
+      ],
       "constraints": [],
-      "result": 1
+      "result": 1,
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:1-limits/1.1-basic-limits:3"
+          }
+        ]
+      }
     },
     {
       "id": 4,
       "description": "Second-order cosine limit: lim(x→0) (1 - cos(x))/x² = 1/2.",
-      "pattern": ["Limit", 0, "BothSides", ["Lambda", "x_", ["Divide", ["Subtract", 1, ["Cos", "x_"]], ["Power", "x_", 2]]]],
+      "pattern": [
+        "Limit",
+        0,
+        "BothSides",
+        [
+          "Lambda",
+          "x_",
+          [
+            "Divide",
+            [
+              "Subtract",
+              1,
+              [
+                "Cos",
+                "x_"
+              ]
+            ],
+            [
+              "Power",
+              "x_",
+              2
+            ]
+          ]
+        ]
+      ],
       "constraints": [],
-      "result": ["Divide", 1, 2]
+      "result": [
+        "Divide",
+        1,
+        2
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:1-limits/1.1-basic-limits:4"
+          }
+        ]
+      }
     }
   ],
   "identity": "calculus:1-limits/1.1-basic-limits"

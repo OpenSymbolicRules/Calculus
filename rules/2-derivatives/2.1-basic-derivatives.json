@@ -32,7 +32,16 @@
         "Lambda",
         "x_",
         0
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.1-basic-derivatives:1"
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -72,7 +81,16 @@
             ]
           ]
         ]
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.1-basic-derivatives:2"
+          }
+        ]
+      }
     }
   ],
   "identity": "calculus:2-derivatives/2.1-basic-derivatives"

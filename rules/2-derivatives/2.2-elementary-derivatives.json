@@ -29,7 +29,16 @@
         "Lambda",
         "x_",
         1
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:1"
+          }
+        ]
+      }
     },
     {
       "id": 2,
@@ -53,7 +62,16 @@
           "Cos",
           "x_"
         ]
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:2"
+          }
+        ]
+      }
     },
     {
       "id": 3,
@@ -81,7 +99,16 @@
             "x_"
           ]
         ]
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:3"
+          }
+        ]
+      }
     },
     {
       "id": 4,
@@ -105,7 +132,16 @@
           "Exp",
           "x_"
         ]
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:4"
+          }
+        ]
+      }
     },
     {
       "id": 5,
@@ -130,7 +166,16 @@
           1,
           "x_"
         ]
-      ]
+      ],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:5"
+          }
+        ]
+      }
     }
   ],
   "identity": "calculus:2-derivatives/2.2-elementary-derivatives"
