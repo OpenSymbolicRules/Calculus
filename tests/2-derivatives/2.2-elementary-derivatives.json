@@ -26,6 +26,14 @@
       "expected_result": ["Lambda", "x", ["Exp", "x"]],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 4,
+      "expression": ["Derivative", ["Lambda", "x", ["Tan", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", 1, ["Power", ["Cos", "x"], 2]]],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }
