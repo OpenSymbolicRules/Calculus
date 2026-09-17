@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Stable `identity` values for rule files, completing canonical `identity:id`
+  rule identifiers.
 - Initial structure for the Calculus module
 - Submodule link to OSR Specification schemas
 - Elementary derivative rules for identity, sine, cosine, exponential, and natural logarithm.

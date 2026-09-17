@@ -13,20 +13,67 @@
     {
       "id": 1,
       "description": "Derivative of a constant: d/dx(c) = 0",
-      "pattern": ["Derivative", ["Lambda", "x_", "c_"]],
-      "constraints": [
-        ["FreeQ", "c_", "x_"]
+      "pattern": [
+        "Derivative",
+        [
+          "Lambda",
+          "x_",
+          "c_"
+        ]
       ],
-      "result": ["Lambda", "x_", 0]
+      "constraints": [
+        [
+          "FreeQ",
+          "c_",
+          "x_"
+        ]
+      ],
+      "result": [
+        "Lambda",
+        "x_",
+        0
+      ]
     },
     {
       "id": 2,
       "description": "Power rule: d/dx(x^n) = n*x^(n-1)",
-      "pattern": ["Derivative", ["Lambda", "x_", ["Power", "x_", "n_"]]],
-      "constraints": [
-        ["FreeQ", "n_", "x_"]
+      "pattern": [
+        "Derivative",
+        [
+          "Lambda",
+          "x_",
+          [
+            "Power",
+            "x_",
+            "n_"
+          ]
+        ]
       ],
-      "result": ["Lambda", "x_", ["Multiply", "n_", ["Power", "x_", ["Add", "n_", -1]]]]
+      "constraints": [
+        [
+          "FreeQ",
+          "n_",
+          "x_"
+        ]
+      ],
+      "result": [
+        "Lambda",
+        "x_",
+        [
+          "Multiply",
+          "n_",
+          [
+            "Power",
+            "x_",
+            [
+              "Add",
+              "n_",
+              -1
+            ]
+          ]
+        ]
+      ]
     }
-  ]
+  ],
+  "identity": "calculus:2-derivatives/2.1-basic-derivatives"
 }
