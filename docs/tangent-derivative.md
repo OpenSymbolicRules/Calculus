@@ -7,5 +7,7 @@ operator in the result.
 
 Like the usual tangent function, the rule applies on its domain of definition.
 
-The same elementary profile also provides `D(sinh(x)) = cosh(x)` and
-`D(cosh(x)) = sinh(x)` using OpenMath `transc1` symbols.
+The same elementary profile also provides `D(sinh(x)) = cosh(x)`,
+`D(cosh(x)) = sinh(x)`, and `D(tanh(x)) = 1 / cosh(x)^2`, using OpenMath
+`transc1` symbols. The last representation avoids adding a nonstandard
+hyperbolic-secant head.

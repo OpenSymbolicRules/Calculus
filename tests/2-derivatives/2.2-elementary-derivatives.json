@@ -50,6 +50,14 @@
       "expected_result": ["Lambda", "x", ["Sinh", "x"]],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 7,
+      "expression": ["Derivative", ["Lambda", "x", ["Tanh", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", 1, ["Power", ["Cosh", "x"], 2]]],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }
