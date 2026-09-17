@@ -11,8 +11,8 @@
     "2-derivatives/2.2-elementary-derivatives.json",
     "2-derivatives/2.3-structural-derivatives.json"
   ],
-  "rule_count": 22,
-  "test_count": 18,
+  "rule_count": 25,
+  "test_count": 21,
   "extensions": [
     {
       "name": "Limit",

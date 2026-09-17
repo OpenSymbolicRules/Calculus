@@ -24,3 +24,8 @@ For inverse sine and cosine, the profile uses the principal-domain forms
 `arith1#root` semantics (with degree two), so consumers must retain the
 OpenMath branch convention rather than treating it as an unconstrained
 algebraic square root.
+
+The trigonometric family is completed with
+`D(cot(x)) = -1 / sin(x)^2`, `D(sec(x)) = sec(x) tan(x)`, and
+`D(csc(x)) = -csc(x) cot(x)`. Their OpenMath heads are `transc1#cot`,
+`transc1#sec`, and `transc1#csc` respectively.

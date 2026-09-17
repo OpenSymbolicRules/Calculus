@@ -90,6 +90,30 @@
       "expected_result": ["Lambda", "x", ["Divide", -1, ["Sqrt", ["Subtract", 1, ["Power", "x", 2]]]]],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 12,
+      "expression": ["Derivative", ["Lambda", "x", ["Cot", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", -1, ["Power", ["Sin", "x"], 2]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 13,
+      "expression": ["Derivative", ["Lambda", "x", ["Sec", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Multiply", ["Sec", "x"], ["Tan", "x"]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 14,
+      "expression": ["Derivative", ["Lambda", "x", ["Csc", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Multiply", -1, ["Csc", "x"], ["Cot", "x"]]],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }

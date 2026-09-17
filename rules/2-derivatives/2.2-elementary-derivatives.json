@@ -8,6 +8,9 @@
     "Sin": "openmath:transc1#sin",
     "Cos": "openmath:transc1#cos",
     "Tan": "openmath:transc1#tan",
+    "Cot": "openmath:transc1#cot",
+    "Sec": "openmath:transc1#sec",
+    "Csc": "openmath:transc1#csc",
     "Sinh": "openmath:transc1#sinh",
     "Cosh": "openmath:transc1#cosh",
     "Tanh": "openmath:transc1#tanh",
@@ -311,6 +314,54 @@
           {
             "name": "OpenSymbolicRules Calculus",
             "locator": "calculus:2-derivatives/2.2-elementary-derivatives:13"
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "description": "Derivative of cotangent, represented without introducing a nonstandard cosecant-squared head.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Cot", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Divide", -1, ["Power", ["Sin", "x_"], 2]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:14"
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "description": "Derivative of secant.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Sec", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Multiply", ["Sec", "x_"], ["Tan", "x_"]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:15"
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "description": "Derivative of cosecant.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Csc", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Multiply", -1, ["Csc", "x_"], ["Cot", "x_"]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:16"
           }
         ]
       }
