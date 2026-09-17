@@ -34,3 +34,8 @@ Their hyperbolic counterparts are also available:
 `D(coth(x)) = -1 / sinh(x)^2`, `D(sech(x)) = -sech(x) tanh(x)`, and
 `D(csch(x)) = -csch(x) coth(x)`. These use the OpenMath `transc1` heads
 `coth`, `sech`, and `csch` directly.
+
+The remaining principal inverse-hyperbolic derivatives are
+`D(asinh(x)) = 1 / sqrt(1 + x^2)` and
+`D(acosh(x)) = 1 / sqrt(x^2 - 1)`, represented using `Asinh` and `Acosh`
+with their OpenMath `transc1` semantics.

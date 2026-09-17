@@ -138,6 +138,22 @@
       "expected_result": ["Lambda", "x", ["Multiply", -1, ["Csch", "x"], ["Coth", "x"]]],
       "num_steps": 1,
       "grade": "A"
+    },
+    {
+      "id": 18,
+      "expression": ["Derivative", ["Lambda", "x", ["Asinh", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", 1, ["Sqrt", ["Add", 1, ["Power", "x", 2]]]]],
+      "num_steps": 1,
+      "grade": "A"
+    },
+    {
+      "id": 19,
+      "expression": ["Derivative", ["Lambda", "x", ["Acosh", "x"]]],
+      "variable": "x",
+      "expected_result": ["Lambda", "x", ["Divide", 1, ["Sqrt", ["Subtract", ["Power", "x", 2], 1]]]],
+      "num_steps": 1,
+      "grade": "A"
     }
   ]
 }

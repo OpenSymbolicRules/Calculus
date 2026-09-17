@@ -21,6 +21,8 @@
     "Atanh": "openmath:transc1#arctanh",
     "Asin": "openmath:transc1#arcsin",
     "Acos": "openmath:transc1#arccos",
+    "Asinh": "openmath:transc1#arcsinh",
+    "Acosh": "openmath:transc1#arccosh",
     "Exp": "openmath:transc1#exp",
     "Log": "openmath:transc1#ln",
     "Multiply": "openmath:arith1#times",
@@ -413,6 +415,38 @@
           {
             "name": "OpenSymbolicRules Calculus",
             "locator": "calculus:2-derivatives/2.2-elementary-derivatives:19"
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "description": "Derivative of inverse hyperbolic sine on its principal domain.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Asinh", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Divide", 1, ["Sqrt", ["Add", 1, ["Power", "x_", 2]]]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:20"
+          }
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "description": "Derivative of inverse hyperbolic cosine on its principal domain.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Acosh", "x_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Divide", 1, ["Sqrt", ["Subtract", ["Power", "x_", 2], 1]]]],
+      "provenance": {
+        "method": "authored",
+        "sources": [
+          {
+            "name": "OpenSymbolicRules Calculus",
+            "locator": "calculus:2-derivatives/2.2-elementary-derivatives:21"
           }
         ]
       }
