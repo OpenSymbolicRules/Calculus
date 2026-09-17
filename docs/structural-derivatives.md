@@ -1,8 +1,8 @@
 # Structural derivatives
 
-The `2.3-structural-derivatives` file expresses the linearity and product
-rules, allowing its results to be simplified further by the elementary
-derivative rules. Its product rule is ordered:
+The `2.3-structural-derivatives` file expresses linearity over sums and
+differences, and the product rule, allowing its results to be simplified
+further by the elementary derivative rules. Its product rule is ordered:
 
 `D(f g) = f D(g) + D(f) g`.
 

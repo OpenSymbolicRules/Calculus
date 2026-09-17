@@ -7,6 +7,7 @@
     "Derivative": "openmath:calculus1#diff",
     "Lambda": "openmath:fns1#lambda",
     "Add": "openmath:arith1#plus",
+    "Subtract": "openmath:arith1#minus",
     "Multiply": "openmath:arith1#times"
   },
   "rules": [
@@ -23,6 +24,13 @@
       "pattern": ["Derivative", ["Lambda", "x_", ["Multiply", "f_", "g_"]]],
       "constraints": [],
       "result": ["Lambda", "x_", ["Add", ["Multiply", "f_", ["Derivative", ["Lambda", "x_", "g_"]]], ["Multiply", ["Derivative", ["Lambda", "x_", "f_"]], "g_"]]]
+    },
+    {
+      "id": 3,
+      "description": "Linearity of differentiation over a binary difference.",
+      "pattern": ["Derivative", ["Lambda", "x_", ["Subtract", "f_", "g_"]]],
+      "constraints": [],
+      "result": ["Lambda", "x_", ["Subtract", ["Derivative", ["Lambda", "x_", "f_"]], ["Derivative", ["Lambda", "x_", "g_"]]]]
     }
   ]
 }
