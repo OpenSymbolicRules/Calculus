@@ -1,170 +1,195 @@
 {
-  "$schema": "open-symbolic-rules/v0.1",
-  "identity": "calculus:2-derivatives/2.3-structural-derivatives",
-  "section": "2.3",
-  "title": "Structural Derivative Rules",
-  "semantics": {
-    "Derivative": "openmath:calculus1#diff",
-    "Lambda": "openmath:fns1#lambda",
-    "Add": "openmath:arith1#plus",
-    "Subtract": "openmath:arith1#minus",
-    "Multiply": "openmath:arith1#times"
-  },
-  "rules": [
-    {
-      "id": 1,
-      "description": "Linearity of differentiation over a binary sum.",
-      "pattern": [
-        "Derivative",
-        [
-          "Lambda",
-          "x_",
-          [
-            "Add",
-            "f_",
-            "g_"
-          ]
-        ]
-      ],
-      "constraints": [],
-      "result": [
-        "Lambda",
-        "x_",
-        [
-          "Add",
-          [
-            "Derivative",
-            [
-              "Lambda",
-              "x_",
-              "f_"
-            ]
-          ],
-          [
-            "Derivative",
-            [
-              "Lambda",
-              "x_",
-              "g_"
-            ]
-          ]
-        ]
-      ],
-      "provenance": {
-        "method": "authored",
-        "sources": [
-          {
-            "name": "OpenSymbolicRules Calculus",
-            "locator": "calculus:2-derivatives/2.3-structural-derivatives:1"
-          }
-        ]
-      }
+    "$schema": "open-symbolic-rules/v0.1",
+    "identity": "calculus:2-derivatives/2.3-structural-derivatives",
+    "section": "2.3",
+    "title": "Structural Derivative Rules",
+    "semantics": {
+        "Derivative": "openmath:calculus1#diff",
+        "Lambda": "openmath:fns1#lambda",
+        "Add": "openmath:arith1#plus",
+        "Subtract": "openmath:arith1#minus",
+        "Multiply": "openmath:arith1#times",
+        "Apply": "openmath:osr#Apply"
     },
-    {
-      "id": 2,
-      "description": "Product rule, preserving the factor order for noncommutative-aware consumers.",
-      "pattern": [
-        "Derivative",
-        [
-          "Lambda",
-          "x_",
-          [
-            "Multiply",
-            "f_",
-            "g_"
-          ]
-        ]
-      ],
-      "constraints": [],
-      "result": [
-        "Lambda",
-        "x_",
-        [
-          "Add",
-          [
-            "Multiply",
-            "f_",
-            [
-              "Derivative",
-              [
-                "Lambda",
-                "x_",
-                "g_"
-              ]
-            ]
-          ],
-          [
-            "Multiply",
-            [
-              "Derivative",
-              [
-                "Lambda",
-                "x_",
-                "f_"
-              ]
+    "rules": [
+        {
+            "id": 1,
+            "description": "Linearity of differentiation over a binary sum.",
+            "pattern": [
+                "Derivative",
+                [
+                    "Lambda",
+                    "x_",
+                    [
+                        "Add",
+                        "f_",
+                        "g_"
+                    ]
+                ]
             ],
-            "g_"
-          ]
-        ]
-      ],
-      "provenance": {
-        "method": "authored",
-        "sources": [
-          {
-            "name": "OpenSymbolicRules Calculus",
-            "locator": "calculus:2-derivatives/2.3-structural-derivatives:2"
-          }
-        ]
-      }
-    },
-    {
-      "id": 3,
-      "description": "Linearity of differentiation over a binary difference.",
-      "pattern": [
-        "Derivative",
-        [
-          "Lambda",
-          "x_",
-          [
-            "Subtract",
-            "f_",
-            "g_"
-          ]
-        ]
-      ],
-      "constraints": [],
-      "result": [
-        "Lambda",
-        "x_",
-        [
-          "Subtract",
-          [
-            "Derivative",
-            [
-              "Lambda",
-              "x_",
-              "f_"
-            ]
-          ],
-          [
-            "Derivative",
-            [
-              "Lambda",
-              "x_",
-              "g_"
-            ]
-          ]
-        ]
-      ],
-      "provenance": {
-        "method": "authored",
-        "sources": [
-          {
-            "name": "OpenSymbolicRules Calculus",
-            "locator": "calculus:2-derivatives/2.3-structural-derivatives:3"
-          }
-        ]
-      }
-    }
-  ]
+            "constraints": [],
+            "result": [
+                "Lambda",
+                "x_",
+                [
+                    "Add",
+                    [
+                        "Apply",
+                        [
+                            "Derivative",
+                            [
+                                "Lambda",
+                                "x_",
+                                "f_"
+                            ]
+                        ],
+                        "x_"
+                    ],
+                    [
+                        "Apply",
+                        [
+                            "Derivative",
+                            [
+                                "Lambda",
+                                "x_",
+                                "g_"
+                            ]
+                        ],
+                        "x_"
+                    ]
+                ]
+            ],
+            "provenance": {
+                "method": "authored",
+                "sources": [
+                    {
+                        "name": "OpenSymbolicRules Calculus",
+                        "locator": "calculus:2-derivatives/2.3-structural-derivatives:1"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "description": "Product rule, preserving the factor order for noncommutative-aware consumers.",
+            "pattern": [
+                "Derivative",
+                [
+                    "Lambda",
+                    "x_",
+                    [
+                        "Multiply",
+                        "f_",
+                        "g_"
+                    ]
+                ]
+            ],
+            "constraints": [],
+            "result": [
+                "Lambda",
+                "x_",
+                [
+                    "Add",
+                    [
+                        "Multiply",
+                        "f_",
+                        [
+                            "Apply",
+                            [
+                                "Derivative",
+                                [
+                                    "Lambda",
+                                    "x_",
+                                    "g_"
+                                ]
+                            ],
+                            "x_"
+                        ]
+                    ],
+                    [
+                        "Multiply",
+                        [
+                            "Apply",
+                            [
+                                "Derivative",
+                                [
+                                    "Lambda",
+                                    "x_",
+                                    "f_"
+                                ]
+                            ],
+                            "x_"
+                        ],
+                        "g_"
+                    ]
+                ]
+            ],
+            "provenance": {
+                "method": "authored",
+                "sources": [
+                    {
+                        "name": "OpenSymbolicRules Calculus",
+                        "locator": "calculus:2-derivatives/2.3-structural-derivatives:2"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "description": "Linearity of differentiation over a binary difference.",
+            "pattern": [
+                "Derivative",
+                [
+                    "Lambda",
+                    "x_",
+                    [
+                        "Subtract",
+                        "f_",
+                        "g_"
+                    ]
+                ]
+            ],
+            "constraints": [],
+            "result": [
+                "Lambda",
+                "x_",
+                [
+                    "Subtract",
+                    [
+                        "Apply",
+                        [
+                            "Derivative",
+                            [
+                                "Lambda",
+                                "x_",
+                                "f_"
+                            ]
+                        ],
+                        "x_"
+                    ],
+                    [
+                        "Apply",
+                        [
+                            "Derivative",
+                            [
+                                "Lambda",
+                                "x_",
+                                "g_"
+                            ]
+                        ],
+                        "x_"
+                    ]
+                ]
+            ],
+            "provenance": {
+                "method": "authored",
+                "sources": [
+                    {
+                        "name": "OpenSymbolicRules Calculus",
+                        "locator": "calculus:2-derivatives/2.3-structural-derivatives:3"
+                    }
+                ]
+            }
+        }
+    ]
 }

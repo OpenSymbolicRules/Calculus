@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- The structural derivative rules now compose with the base rules. They
+  embedded `Derivative(Lambda(x, f))` where an expression belongs, so once the
+  base rules turned it into `Lambda(x, f')` the answer kept the lambdas nested —
+  `Lambda(x, Add(Lambda(x, Cos(x)), ...))` — and no sum could be differentiated
+  term by term. Each nested derivative is now applied at the bound variable with
+  `Apply`, which a host reduces. The OSR grammar requires a head to be a name
+  (OSR-X-004), so a lambda cannot stand in head position and the application
+  needs a head of its own.
+
 ### Added
 - CI validation that every operator used by a rule has a declared OpenMath
   semantic mapping.
