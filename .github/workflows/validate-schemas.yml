@@ -25,3 +25,21 @@ jobs:
       - run: find rules -name '*.json' ! -name meta.json -print0 | xargs -0 check-jsonschema --schemafile Specification/schemas/rule-file.schema.json --base-uri "file://${PWD}/Specification/schemas/"
       - run: python3 Specification/scripts/validate_semantic_closure.py rules
       - run: find tests -name '*.json' -print0 | xargs -0 check-jsonschema --schemafile Specification/schemas/test-file.schema.json --base-uri "file://${PWD}/Specification/schemas/"
+
+  v1:
+    name: Check generated OSR v1 files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: recursive
+      - uses: actions/checkout@v7
+        with:
+          repository: OpenSymbolicRules/Verification
+          ref: ed6195de7070645dc2029742ecc1e259e2e57d7a
+          path: verification
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - run: python -m pip install check-jsonschema==0.38.0
+      - run: scripts/check-v1.sh "verification/reports/$(python3 -c 'import json; print(json.load(open("v1/calculus.report.json"))["build"]["source_digest"].removeprefix("sha256:"))')"

@@ -1,0 +1,95 @@
+{"strategy":
+ {"termination":
+  {"theorem": "OSR.Calculus.rewrite_result",
+   "status": "proved",
+   "statement":
+   "no rule applies to the result of a rule: normalization takes at most one step"},
+  "seeds": 28,
+  "engine":
+  "OSR.Calculus.rewrite (root rewriting; proved sound: OSR.Calculus.apply?_sound)"},
+ "ruleset": "calculus",
+ "osr_format": "1.0.0-alpha.1",
+ "not_migrated":
+ [{"reason":
+   "the side condition FreeQ (a variable does not occur free) has no OpenMath symbol",
+   "legacy_id": "calculus:1-limits/1.1-basic-limits:1"},
+  {"reason":
+   "the side condition FreeQ (a variable does not occur free) has no OpenMath symbol",
+   "legacy_id": "calculus:2-derivatives/2.1-basic-derivatives:1"},
+  {"reason":
+   "the side condition FreeQ (a variable does not occur free) has no OpenMath symbol",
+   "legacy_id": "calculus:2-derivatives/2.1-basic-derivatives:2"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:7"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:8"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:9"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:11"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:12"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:13"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:14"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:15"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:16"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:17"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:18"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:19"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:20"},
+  {"reason":
+   "uses a function outside the fragment (hyperbolic, reciprocal trigonometric, inverse sine or cosine, or square root)",
+   "legacy_id": "calculus:2-derivatives/2.2-elementary-derivatives:21"},
+  {"reason": "uses osr#Apply, which is not an OpenMath symbol",
+   "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:1"},
+  {"reason": "uses osr#Apply, which is not an OpenMath symbol",
+   "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:2"},
+  {"reason": "uses osr#Apply, which is not an OpenMath symbol",
+   "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:3"}],
+ "metrics":
+ {"rules_with_findings": 2,
+  "rules_not_migrated": 20,
+  "rules_migrated": 12,
+  "rules_exported": 12,
+  "real":
+  {"unsupported": 0,
+   "unproved": 0,
+   "proved": 12,
+   "counterexample": 0,
+   "certified": 12,
+   "blocked_by_mapping_assurance": 0},
+  "julia_execution":
+  "not measured by the exporter; see OpenSymbolicRules.jl test/test_osr_v1.jl",
+  "complex":
+  {"unsupported": 0,
+   "unproved": 2,
+   "proved": 10,
+   "counterexample": 0,
+   "certified": 10,
+   "blocked_by_mapping_assurance": 0}},
+ "build":
+ {"source_digest":
+  "sha256:e320b5833b7408f944c7d5c72411fddbaee2a02d4cbda009f124a180674903fe",
+  "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "lean_toolchain": "leanprover/lean4:v4.35.0"}}

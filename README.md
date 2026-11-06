@@ -21,6 +21,17 @@ consumers can compose elementary derivatives without assuming commutativity.
 The limits profile includes the standard sine, tangent, and second-order cosine
 limits at zero.
 
+## OSR v1
+
+`v1/` holds the derivative and limit rules that the OSR v1 fragment can
+state, generated from Lean proofs (`OpenSymbolicRules/Lean`) and published by
+`OpenSymbolicRules/Verification`.  See [docs/osr-v1.md](docs/osr-v1.md).
+Check it with:
+```bash
+just check        # v0.1 schemas, semantic closure and v1 files
+just v1 <report>  # also compare v1/ with a Verification report directory
+```
+
 ## License
 
 This repository is licensed under the [MIT License](LICENSE). OpenMath
