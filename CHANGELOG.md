@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- OSR v1 rule set and verification report in `v1/` (12 derivative and limit
+- OSR v1 rule set and verification report in `v1/` (26 derivative and limit
   rules, proved in `OpenSymbolicRules/Lean`), copied from the published
   `OpenSymbolicRules/Verification` report, with a CI check of schema
   validity, source digest and byte identity (`scripts/check-v1.sh`).
