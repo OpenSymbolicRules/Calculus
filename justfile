@@ -3,6 +3,10 @@
 # Everything CI runs, except the comparison with a Verification report.
 check: validate closure v1
 
+# Build the documentation and LLM text exports under docs/build/.
+doc:
+	julia --project=docs -e 'using Pkg; Pkg.instantiate(); include("docs/make.jl")'
+
 # Validate the v0.1 schemas, rules and test fixtures.
 validate:
 	./scripts/validate.sh

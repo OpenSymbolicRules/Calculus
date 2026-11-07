@@ -38,8 +38,9 @@ In v1:
   `x = 0` (`x^0` is defined around 0, `0 · x^(-1)` is not); it is distributed
   with the status `counterexample` and a Lean proof of its negation, and
   would hold with the condition `n ≠ 0`;
-- 3 rules are not migrated: they use `osr#Apply`, which is not an OpenMath
-  symbol;
+- 3 structural rules remain not migrated: their v0.1 patterns omit the
+  differentiability assumptions required by the sum, difference and product
+  rules, and their `osr#Apply` node is outside the OpenMath fragment;
 - a rule applies at the root of a `diff` or `limit` term and keeps the
   input's bound variable; its result is a lambda or a value, so
   normalization takes one step at most.

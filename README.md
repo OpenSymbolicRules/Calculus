@@ -30,6 +30,7 @@ Check it with:
 ```bash
 just check        # v0.1 schemas, semantic closure and v1 files
 just v1 <report>  # also compare v1/ with a Verification report directory
+just doc          # HTML documentation and LLM text exports in docs/build/
 ```
 
 ## License

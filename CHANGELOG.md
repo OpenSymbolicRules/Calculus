@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- A `just doc` entry point using Documenter and DocumenterLandingPage,
+  including `llms.txt` and `llms-full.txt` under `docs/build/`.
 - OSR v1 rule set and verification report in `v1/` (29 derivative and limit
   rules from `OpenSymbolicRules/Lean`, the v0.1 power rule refuted), copied from the published
   `OpenSymbolicRules/Verification` report, with a CI check of schema
@@ -15,6 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `justfile` entry points (`check`, `validate`, `closure`, `v1`, `update-v1`).
 
 ### Changed
+- Refresh the v1 files from Lean source digest `4032322e…` and pin the
+  corresponding Verification report in CI.
+- Document and report the missing operand differentiability premises of the
+  three structural v0.1 rules, with Lean witnesses for sums, differences
+  and products. These rules remain outside the certified v1 catalogue.
 - Updated the Specification submodule to the OSR v1 draft.
 
 ### Fixed
