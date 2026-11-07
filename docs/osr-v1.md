@@ -30,8 +30,7 @@ In v1:
 - 26 of the 32 rules are migrated: the derivatives of `x`, `sin`, `cos`,
   `exp`, `ln`, `tan`, `arctan`, of the hyperbolic functions, of `cot`, `sec`,
   `csc`, of the inverse trigonometric and hyperbolic functions, and the five
-  limits at 0.  25 are proved over ℝ (Mathlib has no derivative lemma for
-  `artanh` yet) and 14 over ℂ, where only `sinh`, `cosh`, `tanh` and `cot`
+  limits at 0.  All 26 are proved over ℝ and 14 over ℂ, where only `sinh`, `cosh`, `tanh` and `cot`
   have an interpretation among the new functions, the complex logarithm is
   not differentiable on its branch cut, and the complex `arctan` mapping is
   provisional.  `Sqrt` becomes `arith1#root(x, 2)`;
