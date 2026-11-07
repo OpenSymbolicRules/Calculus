@@ -6,7 +6,7 @@ generated, never edited by hand:
 
 | File | Content |
 |---|---|
-| `v1/calculus.osr.json` | 26 rules: derivatives `diff(λx. F) ⟶ λx. G` and two-sided limits `limit(a, both_sides, λx. F) ⟶ L`, with lambdas as `OMBIND fns1#lambda`, and verification records over ℝ and ℂ. |
+| `v1/calculus.osr.json` | 29 rules: derivatives `diff(λx. F) ⟶ λx. G` and two-sided limits `limit(a, both_sides, λx. F) ⟶ L`, with lambdas as `OMBIND fns1#lambda`, and verification records over ℝ and ℂ. |
 | `v1/calculus.report.json` | Machine-readable audit: metrics per domain and the rules not migrated. |
 | `v1/calculus.report.md` | The same audit for humans. |
 
@@ -27,16 +27,19 @@ generated, never edited by hand:
 The v0.1 files in `rules/` remain for the v0.1 loader of OpenSymbolicRules.jl.
 In v1:
 
-- 26 of the 32 rules are migrated: the derivatives of `x`, `sin`, `cos`,
+- 29 of the 32 rules are migrated: the derivatives of `x`, `sin`, `cos`,
   `exp`, `ln`, `tan`, `arctan`, of the hyperbolic functions, of `cot`, `sec`,
-  `csc`, of the inverse trigonometric and hyperbolic functions, and the five
-  limits at 0.  All 26 are proved over ℝ and 14 over ℂ, where only `sinh`, `cosh`, `tanh` and `cot`
-  have an interpretation among the new functions, the complex logarithm is
-  not differentiable on its branch cut, and the complex `arctan` mapping is
-  provisional.  `Sqrt` becomes `arith1#root(x, 2)`;
-- 6 rules are not migrated (the report lists them): 3 need the side
-  condition `FreeQ`, which has no OpenMath symbol, and 3 use `osr#Apply`,
-  which is not an OpenMath symbol;
+  `csc`, of the inverse trigonometric and hyperbolic functions, of a
+  constant, the power rule, the limit of a constant and the five limits at 0.
+  28 are proved over ℝ and 16 over ℂ.  `Sqrt` becomes `arith1#root(x, 2)`;
+- `FreeQ` becomes an `independent` matching constraint: the metavariable's
+  match must not mention the bound variable;
+- the v0.1 power rule `diff(λx. x^n) = λx. n x^(n-1)` is **false** at `n = 0`,
+  `x = 0` (`x^0` is defined around 0, `0 · x^(-1)` is not); it is distributed
+  with the status `counterexample` and a Lean proof of its negation, and
+  would hold with the condition `n ≠ 0`;
+- 3 rules are not migrated: they use `osr#Apply`, which is not an OpenMath
+  symbol;
 - a rule applies at the root of a `diff` or `limit` term and keeps the
   input's bound variable; its result is a lambda or a value, so
   normalization takes one step at most.

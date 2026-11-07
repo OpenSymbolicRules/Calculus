@@ -4,50 +4,41 @@
    "status": "proved",
    "statement":
    "no rule applies to the result of a rule: normalization takes at most one step"},
-  "seeds": 56,
+  "seeds": 65,
   "engine":
   "OSR.Calculus.rewrite (root rewriting; proved sound: OSR.Calculus.apply?_sound)"},
  "ruleset": "calculus",
  "osr_format": "1.0.0-alpha.1",
  "not_migrated":
- [{"reason":
-   "the side condition FreeQ (a variable does not occur free) has no OpenMath symbol",
-   "legacy_id": "calculus:1-limits/1.1-basic-limits:1"},
-  {"reason":
-   "the side condition FreeQ (a variable does not occur free) has no OpenMath symbol",
-   "legacy_id": "calculus:2-derivatives/2.1-basic-derivatives:1"},
-  {"reason":
-   "the side condition FreeQ (a variable does not occur free) has no OpenMath symbol",
-   "legacy_id": "calculus:2-derivatives/2.1-basic-derivatives:2"},
-  {"reason": "uses osr#Apply, which is not an OpenMath symbol",
+ [{"reason": "uses osr#Apply, which is not an OpenMath symbol",
    "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:1"},
   {"reason": "uses osr#Apply, which is not an OpenMath symbol",
    "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:2"},
   {"reason": "uses osr#Apply, which is not an OpenMath symbol",
    "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:3"}],
  "metrics":
- {"rules_with_findings": 3,
-  "rules_not_migrated": 6,
-  "rules_migrated": 26,
-  "rules_exported": 26,
+ {"rules_with_findings": 4,
+  "rules_not_migrated": 3,
+  "rules_migrated": 29,
+  "rules_exported": 29,
   "real":
   {"unsupported": 0,
    "unproved": 0,
-   "proved": 26,
-   "counterexample": 0,
-   "certified": 26,
+   "proved": 28,
+   "counterexample": 1,
+   "certified": 28,
    "blocked_by_mapping_assurance": 0},
   "julia_execution":
   "not measured by the exporter; see OpenSymbolicRules.jl test/test_osr_v1.jl",
   "complex":
   {"unsupported": 10,
-   "unproved": 2,
-   "proved": 14,
+   "unproved": 3,
+   "proved": 16,
    "counterexample": 0,
-   "certified": 14,
+   "certified": 16,
    "blocked_by_mapping_assurance": 0}},
  "build":
  {"source_digest":
-  "sha256:c4653df4c27f05847dbd5131f395c6d4ef23da3cb5432d90a094c2d697dcfe8b",
+  "sha256:2f26c4262ba992ada46a0c9d31d905dd271b0c4cc7e9b5c687d199c0e25837d2",
   "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "lean_toolchain": "leanprover/lean4:v4.35.0"}}
