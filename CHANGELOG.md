@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `justfile` entry points (`check`, `validate`, `closure`, `v1`, `update-v1`).
 
 ### Changed
-- Refresh the v1 files from Lean source digest `4efb181a…` (Integration rules
+- Refresh the v1 files from Lean source digest `aca727e3…` (Integration rules
   with residual integrals; the Calculus rules are unchanged).
 - Refresh the v1 files from Lean source digest `be6f672a…` (Integration rules
   with conditions; the Calculus rules are unchanged).
