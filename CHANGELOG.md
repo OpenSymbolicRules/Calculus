@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `justfile` entry points (`check`, `validate`, `closure`, `v1`, `update-v1`).
 
 ### Changed
+- Refresh the v1 files from Lean source digest `68dfb6f0…`, which adds the
+  Integration rule set; the Calculus rules and their certification are
+  unchanged.
 - Refresh the v1 files from Lean source digest `4032322e…` and pin the
   corresponding Verification report in CI.
 - Document and report the missing operand differentiability premises of the
