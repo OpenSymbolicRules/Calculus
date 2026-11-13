@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `justfile` entry points (`check`, `validate`, `closure`, `v1`, `update-v1`).
 
 ### Changed
+- Refresh the generated OSR v1 files from Lean source digest `dcad68f4…`
+  (the calculus rewriter decides closed conditions; this rule set is
+  unchanged).
 - Refresh the v1 files from Lean source digest `a8eff8f4…` (Integration rules
   with residual integrals; the Calculus rules are unchanged).
 - Refresh the v1 files from Lean source digest `be6f672a…` (Integration rules
