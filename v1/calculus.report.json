@@ -4,7 +4,7 @@
    "status": "proved",
    "statement":
    "no rule applies to the result of a rule: normalization takes at most one step"},
-  "seeds": 65,
+  "seeds": 67,
   "engine":
   "OSR.Calculus.rewrite (root rewriting; proved sound: OSR.Calculus.apply?_sound)"},
  "ruleset": "calculus",
@@ -20,28 +20,28 @@
    "requires differentiability assumptions for the operands; the v0.1 rule has no such conditions, and its osr#Apply application is outside OSR v1",
    "legacy_id": "calculus:2-derivatives/2.3-structural-derivatives:3"}],
  "metrics":
- {"rules_with_findings": 4,
+ {"rules_with_findings": 5,
   "rules_not_migrated": 3,
-  "rules_migrated": 29,
-  "rules_exported": 29,
+  "rules_migrated": 30,
+  "rules_exported": 30,
   "real":
   {"unsupported": 0,
    "unproved": 0,
-   "proved": 28,
+   "proved": 29,
    "counterexample": 1,
-   "certified": 28,
+   "certified": 29,
    "blocked_by_mapping_assurance": 0},
   "julia_execution":
   "not measured by the exporter; see OpenSymbolicRules.jl test/test_osr_v1.jl",
   "complex":
   {"unsupported": 10,
    "unproved": 3,
-   "proved": 16,
+   "proved": 17,
    "counterexample": 0,
-   "certified": 16,
+   "certified": 17,
    "blocked_by_mapping_assurance": 0}},
  "build":
  {"source_digest":
-  "sha256:0300f8401db18c4f224a7650460de9f1f2d3cfe0f17fcd776a2d9015fe910714",
+  "sha256:71235dd0f2b3ab0162ab8e30c59a6b4115a3b3693b18036dc5abb1d3945fdd6b",
   "mathlib_revision": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "lean_toolchain": "leanprover/lean4:v4.35.0"}}
